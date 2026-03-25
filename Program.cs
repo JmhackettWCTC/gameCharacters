@@ -1,6 +1,9 @@
 ﻿using NLog;
 using System.Reflection;
 using System.Text.Json;
+using System.Collections.Generic;
+using System.Linq;
+using System.IO;
 string path = Directory.GetCurrentDirectory() + "//nlog.config";
 
 // create instance of Logger
@@ -8,14 +11,34 @@ var logger = LogManager.Setup().LoadConfigurationFromFile(path).GetCurrentClassL
 
 logger.Info("Program started");
 
+var jsonOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+
 // deserialize mario json from file into List<Mario>
 string marioFileName = "mario.json";
-List<Mario> marios = [];
+List<Mario> marios = new List<Mario>();
 // check if file exists
 if (File.Exists(marioFileName))
 {
-  marios = JsonSerializer.Deserialize<List<Mario>>(File.ReadAllText(marioFileName))!;
+  marios = JsonSerializer.Deserialize<List<Mario>>(File.ReadAllText(marioFileName), jsonOptions) ?? new List<Mario>();
   logger.Info($"File deserialized {marioFileName}");
+}
+
+// deserialize Donkey Kong characters from dk.json
+string dkFileName = "dk.json";
+List<DonkeyKong> dks = new List<DonkeyKong>();
+if (File.Exists(dkFileName))
+{
+  dks = JsonSerializer.Deserialize<List<DonkeyKong>>(File.ReadAllText(dkFileName), jsonOptions) ?? new List<DonkeyKong>();
+  logger.Info($"File deserialized {dkFileName}");
+}
+
+// deserialize Street Fighter II characters from sf2.json
+string sfFileName = "sf2.json";
+List<StreetFighter> sfs = new List<StreetFighter>();
+if (File.Exists(sfFileName))
+{
+  sfs = JsonSerializer.Deserialize<List<StreetFighter>>(File.ReadAllText(sfFileName), jsonOptions) ?? new List<StreetFighter>();
+  logger.Info($"File deserialized {sfFileName}");
 }
 
 do
@@ -92,7 +115,7 @@ static void InputCharacter(Character character)
       Console.WriteLine($"Enter {prop.Name}:");
       prop.SetValue(character, Console.ReadLine());
     } else if (prop.PropertyType == typeof(List<string>)) {
-      List<string> list = [];
+      List<string> list = new List<string>();
       do {
         Console.WriteLine($"Enter {prop.Name} or (enter) to quit:");
         string response = Console.ReadLine()!;

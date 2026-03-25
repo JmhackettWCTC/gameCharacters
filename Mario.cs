@@ -1,6 +1,6 @@
 public class Mario : Character
 {
-  public List<string> Alias { get; set; } = [];
+  public List<string> Alias { get; set; } = new List<string>();
 
   public override string Display()
   {
