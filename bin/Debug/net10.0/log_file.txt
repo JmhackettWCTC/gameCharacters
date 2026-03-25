@@ -1,0 +1,9 @@
+2026-03-25 07:54:57.6108|INFO|gameCharacters.Program|Program started
+2026-03-25 07:54:57.7179|INFO|gameCharacters.Program|File deserialized mario.json
+2026-03-25 07:58:35.3041|INFO|gameCharacters.Program|User choice: 
+2026-03-25 07:58:35.3109|INFO|gameCharacters.Program|Program ended
+2026-03-25 07:59:04.7309|INFO|gameCharacters.Program|Program started
+2026-03-25 07:59:04.8282|INFO|gameCharacters.Program|File deserialized mario.json
+2026-03-25 07:59:09.5839|INFO|gameCharacters.Program|User choice: 1
+2026-03-25 07:59:15.7810|INFO|gameCharacters.Program|User choice: 
+2026-03-25 07:59:15.7810|INFO|gameCharacters.Program|Program ended

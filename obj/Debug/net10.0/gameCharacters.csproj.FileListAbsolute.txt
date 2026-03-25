@@ -1,0 +1,17 @@
+C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\obj\Debug\net10.0\gameCharacters.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\obj\Debug\net10.0\gameCharacters.AssemblyInfoInputs.cache
+C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\obj\Debug\net10.0\gameCharacters.AssemblyInfo.cs
+C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\obj\Debug\net10.0\gameCharacters.csproj.CoreCompileInputs.cache
+C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\bin\Debug\net10.0\gameCharacters.exe
+C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\bin\Debug\net10.0\gameCharacters.deps.json
+C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\bin\Debug\net10.0\gameCharacters.runtimeconfig.json
+C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\bin\Debug\net10.0\gameCharacters.dll
+C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\bin\Debug\net10.0\gameCharacters.pdb
+C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\bin\Debug\net10.0\NLog.dll
+C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\obj\Debug\net10.0\gameCharacters.csproj.AssemblyReference.cache
+C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\obj\Debug\net10.0\gameChar.07BE5F21.Up2Date
+C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\obj\Debug\net10.0\gameCharacters.dll
+C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\obj\Debug\net10.0\refint\gameCharacters.dll
+C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\obj\Debug\net10.0\gameCharacters.pdb
+C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\obj\Debug\net10.0\gameCharacters.genruntimeconfig.cache
+C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\obj\Debug\net10.0\ref\gameCharacters.dll

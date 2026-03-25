@@ -1,0 +1,78 @@
+# .NET Core
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.tmp
+*.log
+
+# Rider
+.idea/
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# Test results
+TestResults/
+
+# ASP.NET Core
+appsettings.Development.json
+
+# Entity Framework
+*.db
+*.db-shm
+*.db-wal
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# JetBrains Rider
+.idea/
+
+# ReSharper
+_ReSharper*/
+
+# StyleCop
+StyleCop.Cache
+
+# DotCover
+*.dotCover
+
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+
+# Microsoft Azure
+.publishsettings
+
+# Azure Functions
+bin
+obj
+appsettings.json
+local.settings.json
+
+# .NET Core SDK
+dotnet-sdk/
+
+# Temporary files
+*.tmp
+*.temp
