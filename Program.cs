@@ -53,6 +53,9 @@ do
   Console.WriteLine("7) Display Street Fighter Characters");
   Console.WriteLine("8) Add Street Fighter Character");
   Console.WriteLine("9) Remove Street Fighter Character");
+  Console.WriteLine("10) Edit Mario Character");
+  Console.WriteLine("11) Edit Donkey Kong Character");
+  Console.WriteLine("12) Edit Street Fighter Character");
   Console.WriteLine("Enter to quit");
 
   // input selection
@@ -173,6 +176,75 @@ do
         logger.Info($"StreetFighter Id {sid} removed");
       }
     } else {
+      logger.Error("Invalid Id");
+    }
+  }
+  else if (choice == "10")
+  {
+    // Edit Mario Character
+    Console.WriteLine("Enter the Id of the Mario to edit:");
+    if (UInt64.TryParse(Console.ReadLine(), out UInt64 editId))
+    {
+      int idx = marios.FindIndex(c => c.Id == editId);
+      if (idx == -1)
+      {
+        logger.Error($"Mario Id {editId} not found");
+      }
+      else
+      {
+        InputCharacter(marios[idx]);
+        File.WriteAllText(marioFileName, JsonSerializer.Serialize(marios));
+        logger.Info($"Mario Id {editId} edited");
+      }
+    }
+    else
+    {
+      logger.Error("Invalid Id");
+    }
+  }
+  else if (choice == "11")
+  {
+    // Edit Donkey Kong Character
+    Console.WriteLine("Enter the Id of the Donkey Kong to edit:");
+    if (UInt64.TryParse(Console.ReadLine(), out UInt64 editId))
+    {
+      int idx = dks.FindIndex(c => c.Id == editId);
+      if (idx == -1)
+      {
+        logger.Error($"DonkeyKong Id {editId} not found");
+      }
+      else
+      {
+        InputCharacter(dks[idx]);
+        File.WriteAllText(dkFileName, JsonSerializer.Serialize(dks));
+        logger.Info($"DonkeyKong Id {editId} edited");
+      }
+    }
+    else
+    {
+      logger.Error("Invalid Id");
+    }
+  }
+  else if (choice == "12")
+  {
+    // Edit Street Fighter Character
+    Console.WriteLine("Enter the Id of the Street Fighter to edit:");
+    if (UInt64.TryParse(Console.ReadLine(), out UInt64 editId))
+    {
+      int idx = sfs.FindIndex(c => c.Id == editId);
+      if (idx == -1)
+      {
+        logger.Error($"StreetFighter Id {editId} not found");
+      }
+      else
+      {
+        InputCharacter(sfs[idx]);
+        File.WriteAllText(sfFileName, JsonSerializer.Serialize(sfs));
+        logger.Info($"StreetFighter Id {editId} edited");
+      }
+    }
+    else
+    {
       logger.Error("Invalid Id");
     }
   }
