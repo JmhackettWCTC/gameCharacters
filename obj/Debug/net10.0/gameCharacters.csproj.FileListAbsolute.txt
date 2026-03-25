@@ -15,3 +15,4 @@ C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\obj\Debug\net10
 C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\obj\Debug\net10.0\gameCharacters.pdb
 C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\obj\Debug\net10.0\gameCharacters.genruntimeconfig.cache
 C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\obj\Debug\net10.0\ref\gameCharacters.dll
+C:\Users\minec\OneDrive\Desktop\WCTC\Net Database\gameCharacters\obj\Debug\net10.0\gameCharacters.sourcelink.json
