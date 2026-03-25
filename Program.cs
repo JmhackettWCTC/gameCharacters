@@ -47,6 +47,12 @@ do
   Console.WriteLine("1) Display Mario Characters");
   Console.WriteLine("2) Add Mario Character");
   Console.WriteLine("3) Remove Mario Character");
+  Console.WriteLine("4) Display Donkey Kong Characters");
+  Console.WriteLine("5) Add Donkey Kong Character");
+  Console.WriteLine("6) Remove Donkey Kong Character");
+  Console.WriteLine("7) Display Street Fighter Characters");
+  Console.WriteLine("8) Add Street Fighter Character");
+  Console.WriteLine("9) Remove Street Fighter Character");
   Console.WriteLine("Enter to quit");
 
   // input selection
@@ -64,37 +70,113 @@ do
   else if (choice == "2")
   {
     // Add Mario Character
-    // Generate unique Id
     Mario mario = new()
     {
       Id = marios.Count == 0 ? 1 : marios.Max(c => c.Id) + 1
     };
     InputCharacter(mario);
-    // Add Character
     marios.Add(mario);
     File.WriteAllText(marioFileName, JsonSerializer.Serialize(marios));
-    logger.Info($"Character added: {mario.Name}");
+    logger.Info($"Mario added: {mario.Name}");
   }
   else if (choice == "3")
   {
     // Remove Mario Character
     Console.WriteLine("Enter the Id of the character to remove:");
-    if (UInt32.TryParse(Console.ReadLine(), out UInt32 Id))
+    if (UInt64.TryParse(Console.ReadLine(), out UInt64 mid))
     {
-      Mario? character = marios.FirstOrDefault(c => c.Id == Id);
+      Mario? character = marios.FirstOrDefault(c => c.Id == mid);
       if (character == null)
       {
-        logger.Error($"Character Id {Id} not found");
+        logger.Error($"Mario Id {mid} not found");
       } else {
         marios.Remove(character);
-        // serialize list<marioCharacter> into json file
         File.WriteAllText(marioFileName, JsonSerializer.Serialize(marios));
-        logger.Info($"Character Id {Id} removed");
+        logger.Info($"Mario Id {mid} removed");
       }
     } else {
       logger.Error("Invalid Id");
     }
-  } else if (string.IsNullOrEmpty(choice)) {
+  }
+  else if (choice == "4")
+  {
+    // Display Donkey Kong Characters
+    foreach(var c in dks)
+    {
+      Console.WriteLine(c.Display());
+    }
+  }
+  else if (choice == "5")
+  {
+    // Add Donkey Kong Character
+    DonkeyKong dk = new()
+    {
+      Id = dks.Count == 0 ? 1 : dks.Max(c => c.Id) + 1
+    };
+    InputCharacter(dk);
+    dks.Add(dk);
+    File.WriteAllText(dkFileName, JsonSerializer.Serialize(dks));
+    logger.Info($"DonkeyKong added: {dk.Name}");
+  }
+  else if (choice == "6")
+  {
+    // Remove Donkey Kong Character
+    Console.WriteLine("Enter the Id of the character to remove:");
+    if (UInt64.TryParse(Console.ReadLine(), out UInt64 did))
+    {
+      DonkeyKong? character = dks.FirstOrDefault(c => c.Id == did);
+      if (character == null)
+      {
+        logger.Error($"DonkeyKong Id {did} not found");
+      } else {
+        dks.Remove(character);
+        File.WriteAllText(dkFileName, JsonSerializer.Serialize(dks));
+        logger.Info($"DonkeyKong Id {did} removed");
+      }
+    } else {
+      logger.Error("Invalid Id");
+    }
+  }
+  else if (choice == "7")
+  {
+    // Display Street Fighter Characters
+    foreach(var c in sfs)
+    {
+      Console.WriteLine(c.Display());
+    }
+  }
+  else if (choice == "8")
+  {
+    // Add Street Fighter Character
+    StreetFighter sf = new()
+    {
+      Id = sfs.Count == 0 ? 1 : sfs.Max(c => c.Id) + 1
+    };
+    InputCharacter(sf);
+    sfs.Add(sf);
+    File.WriteAllText(sfFileName, JsonSerializer.Serialize(sfs));
+    logger.Info($"StreetFighter added: {sf.Name}");
+  }
+  else if (choice == "9")
+  {
+    // Remove Street Fighter Character
+    Console.WriteLine("Enter the Id of the character to remove:");
+    if (UInt64.TryParse(Console.ReadLine(), out UInt64 sid))
+    {
+      StreetFighter? character = sfs.FirstOrDefault(c => c.Id == sid);
+      if (character == null)
+      {
+        logger.Error($"StreetFighter Id {sid} not found");
+      } else {
+        sfs.Remove(character);
+        File.WriteAllText(sfFileName, JsonSerializer.Serialize(sfs));
+        logger.Info($"StreetFighter Id {sid} removed");
+      }
+    } else {
+      logger.Error("Invalid Id");
+    }
+  }
+  else if (string.IsNullOrEmpty(choice)) {
     break;
   } else {
     logger.Info("Invalid choice");

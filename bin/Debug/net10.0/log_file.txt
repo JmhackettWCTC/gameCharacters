@@ -13,3 +13,9 @@
 2026-03-25 08:11:12.9217|INFO|gameCharacters.Program|File deserialized sf2.json
 2026-03-25 08:11:25.1808|INFO|gameCharacters.Program|User choice: 
 2026-03-25 08:11:25.1808|INFO|gameCharacters.Program|Program ended
+2026-03-25 08:22:28.0059|INFO|gameCharacters.Program|Program started
+2026-03-25 08:22:28.0988|INFO|gameCharacters.Program|File deserialized mario.json
+2026-03-25 08:22:28.0988|INFO|gameCharacters.Program|File deserialized dk.json
+2026-03-25 08:22:28.0988|INFO|gameCharacters.Program|File deserialized sf2.json
+2026-03-25 08:22:37.5849|INFO|gameCharacters.Program|User choice: 
+2026-03-25 08:22:37.5849|INFO|gameCharacters.Program|Program ended
